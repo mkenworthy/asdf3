@@ -1,7 +1,7 @@
-name: build pull request
+name: build
 
 on:
-  pull_request:
+  push:
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
 
       - name: Build the article PDF
         id: build
-        uses: showyourwork/showyourwork-action@main
+        uses: showyourwork/showyourwork-action@v1
         with:
           showyourwork-spec: git+https://github.com/showyourwork/showyourwork
         env:
